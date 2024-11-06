@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sản Phẩm</title>
+    <link
+      href="images/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <script>
+      window.onload = function () {
+        showSearch();
+      };
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img id="header-img1" src="images2/header-img1.png" alt="" />
+      <img id="header-img2" src="images2/header-img2.png" alt="" />
+      <img id="header-img3" src="images2/header-img3.png" alt="" />
+      <a id="top" href="index.html"><img src="images2/logo.png" alt="" /></a>
+      <nav>
+        <a href="index.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng Nhập</a>
+        <a href="dangky.html">Đăng Ký</a>
+        <a href="lienhe.html">Liên Hệ</a>
+        <div class="search-container">
+          <form name="frm-search" method="get" action="timkiem.html">
+            <div class="input-container">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Nhập nội dung cần tìm..."
+                name="words"
+                onkeypress="checkKeySearch(e)"
+              />
+              <i class="fa fa-search icon-white" onclick="doSearch()"></i>
+              <i onclick="openCart()" class="fa fa-shopping-cart icon-pink"></i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main class="one-col">
+      <article>
+        <h1><div id="searchDetail"></div></h1>
+      </article>
+    </main>
+
+    <footer>
+      &#169; Bản quyền thuộc về Huynh Anh Hao.
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+      <a href="#top" class="anhtop">
+        <img src="images2/top.png" width="50px" />
+      </a>
+    </footer>
+  </body>
+</html>

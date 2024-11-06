@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi-vn">
+  <head>
+    <title>Đơn hàng</title>
+    <meta charset="UTF-8" />
+    <link
+      href="images/favicon.ico"
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+      window.onload = function () {
+        showCart();
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <img id="header-img1" src="images2/header-img1.png" alt="" />
+      <img id="header-img2" src="images2/header-img2.png" alt="" />
+      <img id="header-img3" src="images2/header-img3.png" alt="" />
+      <a id="#top" href="index.html"><img src="images2/logo.png" alt="" /></a>
+      <nav>
+        <a href="index.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng Nhập</a>
+        <a href="dangky.html">Đăng Ký</a>
+        <a href="lienhe.html">Liên Hệ</a>
+        <div class="search-container">
+          <form name="frm-search" method="get" action="timkiem.html">
+            <div class="input-container">
+              <input
+                class="search-input"
+                type="text"
+                placeholder="Nhập nội dung cần tìm..."
+                name="words"
+                onkeypress="checkKeySearch(e)"
+              />
+              <i class="fa fa-search icon-white" onclick="doSearch()"></i>
+              <i onclick="openCart()" class="fa fa-shopping-cart icon-pink"></i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main class="one-col">
+      <h1>Chi tiết đơn hàng</h1>
+      <table id="cartDetail" border="1">
+        <thead>
+          <tr>
+            <th>Hình Sản Phẩm</th>
+            <th>Tên Sản Phẩm</th>
+            <th>Số Lượng</th>
+            <th>Giá</th>
+            <th>Thành Tiền</th>
+            <th>Xóa</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6" id="tfooterthanhtoan">
+              Tổng thành tiền (A) = <span id="bill_totalpretax"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" id="tfooterthanhtoan">
+              Chiết Khấu (B) = <span id="bill_discount"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" id="tfooterthanhtoan">
+              Thuế (C) = 10% x (A - B) = <span id="bill_tax"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" id="tfooterthanhtoan">
+              Tổng đơn hàng = A - B + C = <span id="bill_total"></span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="6" id="tfooterdathang">
+              <button type="submit">Xác Nhận Đơn Hàng</button>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer>
+      &#169; 2021 Bản quyền thuộc về Huỳn Anh Hào.
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+      <a href="#logo"><img src="images/top.png" width="50px" /></a>
+    </footer>
+  </body>
+</html>
